@@ -1,0 +1,397 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.root {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(img/back.png);
+    background-position: center;
+    background-size: cover;
+    border-bottom: 8px solid rgb(43, 41, 41);
+}
+
+.nav {
+    padding: 1% 4vw 10px 0;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-top: 10px;
+    padding-left: 60px;
+    width: 11%;
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cont {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.cont select {
+    padding: 10px 12px;
+    background-color: rgb(53, 38, 38);
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid #eee;
+}
+
+.cont select option {
+    background: rgb(49, 47, 47);
+    font-weight: 700;
+}
+
+.cont .login .SignIn {
+    padding: 10px 18px;
+    background-color: #e50914;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
+.login .SignIn {
+    color: white;
+    font-weight: 500;
+}
+
+.about {
+    width: 100%;
+    height: calc(100vh - 50px);
+}
+
+.about {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about h1 {
+    font-size: 4.125rem;
+    color: white;
+    z-index: 1;
+    max-width: 640px;
+    line-height: 1.1;
+}
+
+.about h3 {
+    font-weight: 400;
+    font-size: 2.125rem;
+    color: white;
+}
+
+.about h4 {
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.get {
+    display: flex;
+    position: relative;
+}
+
+.get label {
+    position: absolute;
+    top: 50%;
+    color: #8c8c8c;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    pointer-events: none;
+    transition: .5s ease, top .5s ease, transform .5s ease;
+}
+
+input:focus~label,
+input:focus~ :valid {
+    top: 20px;
+}
+
+.get input {
+    width: 600px;
+    height: 70px;
+    border-radius: 3px;
+    outline: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: none;
+    background: white;
+}
+
+.about .get button {
+    margin: 0;
+    padding: 18px 40px;
+    background: #e50914;
+    color: white;
+    font-size: 30px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.about button:hover {
+    background-color: red;
+    font-weight: 700;
+}
+
+.second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-bottom: 8px solid rgb(43, 41, 41);
+}
+
+.second .dataEl {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    height: 100%;
+    padding: 0 3rem 0 0;
+    width: 52%;
+    z-index: 2;
+    gap: 20px;
+}
+
+.second h1 {
+    font-size: 3.625rem;
+    font-weight: 600;
+}
+
+.second h3 {
+    font-size: 2.125rem;
+    font-weight: 400;
+}
+
+.second .photos {
+    flex: 1;
+}
+
+.pictureOne {
+    position: relative;
+    width: 600px;
+    height: fit-content;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.video {
+    content: "";
+    position: absolute;
+    top: 49%;
+    left: 85px;
+    overflow: hidden;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.pictureTwo {
+    position: relative;
+    width: 600px;
+    height: fit-content;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.card-video {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 120px;
+    width: 400px;
+    overflow: hidden;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.third {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-bottom: 8px solid rgb(43, 41, 41);
+}
+
+.third .phoneData {
+    flex: 1;
+}
+
+.third .phnData {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 0 1 auto;
+    height: 100%;
+    padding: 0 3rem 0 0;
+    width: 52%;
+    z-index: 3;
+    gap: 20px;
+}
+
+.third h1 {
+    font-size: 3.625rem;
+    font-weight: 600;
+}
+
+.third h3 {
+    font-size: 2.125rem;
+    font-weight: 400;
+}
+
+.question {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 10px solid rgb(43, 41, 41);
+
+}
+
+.question h1 {
+    margin: 30px 0;
+    font-size: 3.125rem;
+    font-weight: 700;
+    color: white;
+}
+
+
+.question .ques h2 {
+    color: white;
+    gap: 30px;
+    padding: 0.8em 2.2em 0.8em 1.2em;
+    background-color: #303030;
+    border-bottom: 10px solid black;
+    width: 800px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.625rem;
+}
+
+.aboutnew {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.aboutnew h4 {
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.inputData {
+    display: flex;
+    padding-bottom: 80px;
+}
+
+.aboutnew input {
+    width: 600px;
+    height: 65px;
+    border: 1px solid white;
+    border-radius: 3px;
+    outline: none;
+}
+
+.aboutnew button {
+    padding: 15px 40px;
+    background: #e50914;
+    color: white;
+    font-size: 30px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.aboutnew .inputData button:hover {
+    background-color: red;
+    font-weight: 700;
+}
+
+.last {
+    height: 50vh !important;
+    width: 100%;
+    background-color: black;
+}
+
+.last .para {
+    color: #737373;
+    padding-top: 40px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-left: 100px;
+    padding-left: 100px;
+}
+
+.first p {
+    color: #737373;
+    margin-left: 100px;
+    padding-left: 100px;
+    margin-top: 25px;
+}
+
+.last .main {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sec p {
+    color: #737373;
+    margin-left: 100px;
+    margin-top: 25px;
+}
+
+.third1 p {
+    color: #737373;
+    margin-left: 100px;
+    margin-top: 25px;
+}
+
+.fourth1 p {
+    color: #737373;
+    margin-left: 100px;
+    margin-top: 25px;
+}
+
+.language select {
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    margin-left: 200px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+
+.last h2 {
+    color: #737373;
+    font-size: 15px;
+    margin-left: 200px;
+    margin-top: 40px;
+}
