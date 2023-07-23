@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this is about constructor</h1>
+    <!-- <script>
+        class form {
+            constructor(id, trainno) {
+                this.name = id
+                this.trainno = trainno
+            }
+            submit() {
+                alert(this.name + ": your form is submitted for train number " + this.trainno)
+            }
+            cancel() {
+                alert(this.name + ": your form is cancelled for train number " + this.trainno)
+            }
+        }
+
+        let aadiform = new form("aadi", 22313)
+        let kanhaform = new form("kanha", 24454)
+        aadiform.submit()
+        kanhaform.submit()
+        aadiform.cancel()
+    </script> -->
+
+    <h1>another tutorial about constructor/h1>
+        <!-- <script>
+        class Animal {
+            constructor(name, sound) {
+                this.name = name
+                this.sound = sound
+            }
+            dog() {
+                console.log(`name of dog is ${this.name} and he or she is ${this.sound}`)
+            }
+            cat() {
+                console.log(`name of dog is ${this.name} and he or she is ${this.sound}`)
+            }
+            lion() {
+                console.log(`name of dog is ${this.name} and he or she is ${this.sound}`)
+            }
+        }
+        let first = new Animal("Husky", "Barking")
+        let second = new Animal("Kitty", "Meow-Meow")
+        let third = new Animal("Tyson", "Roaring")
+        first.dog()
+        second.cat()
+        third.lion()
+    </script> -->
+
+        <h1>using extends keyword</h1>
+        <script>
+            class Animal {
+                constructor(name, sound, color) {
+                    this.name = name
+                    this.sound = sound
+                    this.color = color
+                }
+                run() {
+                    console.log(this.name + " is running")
+                }
+                shout() {
+                    console.log(this.name + " is shouting")
+                }
+            }
+            class Dog extends Animal {
+                bite() {
+                    console.log(`the name of Dog is ${this.name} and he/she is ${this.sound} and the color of this Dog is ${this.color}`)
+                }
+            }
+            class Cat extends Dog {
+                milk() {
+                    console.log(`the name of cat is ${this.name} and he/she is ${this.sound} and the color of this cat is ${this.color}`)
+                }
+            }
+
+            let ani = new Animal("Bruno", "Roaring", "white")
+            let bark = new Dog("Tyson", "Barking", "Black")
+            let kitty = new Cat("Kitty", "Meow-Meow", "Brown")
+            ani.run()
+            ani.shout()
+            bark.bite()
+            kitty.milk()
+        </script>
+</body>
+
+</html>

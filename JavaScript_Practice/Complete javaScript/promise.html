@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this is about promises</h1>
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            console.log("first promise is pending")
+            setTimeout(() => {
+                // console.log("this is first")
+                resolve(true)
+            }, 2000)
+        });
+
+        let p2 = new Promise((resolve, reject) => {
+            console.log("Second promise is pending")
+            setTimeout(() => {
+                // console.log("this is second")
+                reject(new Error("I am an error"))
+            }, 5000)
+        });
+        console.log(p1, p2)
+
+        // .then and .catch both are conssumers in js 
+
+        p1.then((value) => {
+            console.log(value)
+        });
+
+        // p2.catch((error) => {
+        //     console.log("some error occured in p2")
+        // });
+
+        p2.then((value) => {
+            console.log(value)
+        },(err) => {
+            console.log(err)
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this is about closures</h1>
+    <p>A closure is the combination of a function bundled together(enclosed) with reference to the surrounding state(the
+        lexical environment)</p>
+    <p>in other words a clsure gives you access to an outer function scope from an inner function</p>
+    <script>
+        //😄😄 function hellow() {
+        //    let message = "Good Morning"
+        //     console.log("hellow 1: " + message)
+        //     {
+        //        let message = "Good Afternoon"
+        //         console.log("hellow 2: " + message)
+        //     }
+        //     console.log(message)
+        // }   
+        // hellow()
+
+
+        // function hellow() {
+        //     let message = "Good Morning"
+        //     {
+        //         let message = "Good Afternoon"
+        //         console.log("hellow 2: " + message)
+        //     }
+        //     let c = function hlw() {
+        //         //😄😄 return value with it's lexical enviornment.
+
+        //         console.log("hlw i'm c " + message)
+        //     }
+        //     return c
+        // }
+        // c = hellow()
+        // c()
+
+
+
+        // function init() {
+        //     var name = "aditya";
+        //     function displayName() {
+        //         console.log(name);
+        //     }
+        //     //😄😄 we can update the value 
+        //     name = "Kanha";
+        //     return displayName;
+        // }
+        // let c = init();
+        // c()
+
+
+
+        // const x = () => {
+        //     let a = 1
+        //     console.log(a)
+        //     const y = () => {
+        //         a = 2
+        //         console.log(a)
+        //         const z = () => {
+        //             a = 3
+        //             console.log(a)
+        //         }
+        //         z()
+        //     }
+        //     y()
+        // }
+        // x()
+
+
+
+        function returnfunc() {
+            const x = () => {
+                let a = 1
+                console.log(a)
+                const y = () => {
+                    a = 2
+                    console.log(a)
+                    const z = () => {
+                        a = 3
+                        console.log(a)
+                    }
+                    z()
+                }
+                //😄😄 also here we can update the value
+
+                a = 999    //😄😄 it's change the y and z both functions values bcz y is the lexical function of z than it's change the value of z also
+                y()
+            }
+            return x
+        }
+        let a = returnfunc()
+        a()
+    </script>
+</body>
+
+</html>

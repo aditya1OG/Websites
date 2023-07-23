@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this is about Destructuring</h1>
+    <script>
+        // let arr = [3, 4, 5, 6, 9, 2]
+        // let [a, b, c, ...rest] = arr
+        // console.log(a, b, c, rest)
+        // console.log(a, rest)    //also if we don't want to print the value so don't pass the argument for this value
+
+        //👍👎 or we can do like this.....
+
+        // let { a, b, c } = { a: 2, b: 3, c: 5 }
+        // console.log(a, b, c)
+
+        //👍 spread Operator----->
+
+        // let arr1 = [3, 6, 4]
+        // let obj1 = { ...arr1 }
+        // console.log(obj1)
+        // console.log(arr1)
+
+        //👍👍 using object---->
+        let obj1 = {
+            Name: "aadi",
+            Course: "MCA",
+            Duration: "2 Years"
+        }
+        console.log(obj1)   //here we can't change the the value of keys
+        // console.log({ ...obj1, Name: "kanha" })  //without spread operator we can change the value of these keys.
+        // console.log({ Name: "kanha", ...obj1 })  //in this case values not override bcz we print the obj1 at the last so it will print the same value of obj1 without updating or changing
+    </script>
+</body>
+
+</html>

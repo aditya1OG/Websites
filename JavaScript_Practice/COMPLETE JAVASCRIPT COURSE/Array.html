@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="greeting-el">Good Morning</p>
+    <script>
+        // let cards = [2, 3, 4, 5]
+        // cards.push = 6
+        // console.log(cards.length);
+
+        // let data = [
+        //     "aditya",
+        //     "kanha",
+        //     "tiwari"
+        // ]
+        // let newdata = "ashu";
+
+        // //👍 add the element at the last 
+        // // data.push = newdata;
+        // // //👍or
+        // data.push(newdata);
+        // console.log(data);
+
+        // //👍 delete the last element 
+        // data.pop(newdata)
+        // console.log(data)
+
+
+        //<-----😄👍😄👍 loops 😄👍😄👍----->//
+
+        // let cards = [2, 3, 5, 6, 7, 8, 9]
+        // for (let i = 0; i <= cards.length; i++);
+        // console.log(cards);
+
+
+        //😄👍QUS->loops-->
+        let sentence = ["hellow", "aadi", "how", "are", "you"]
+        let greetingEl = document.getElementById("greeting-el");
+        for (let i = 0; i < sentence.length; i++) {
+            console.log(sentence[i])
+            greetingEl.textContent += sentence[i] + " ";
+        }
+
+    </script>
+</body>
+
+</html>

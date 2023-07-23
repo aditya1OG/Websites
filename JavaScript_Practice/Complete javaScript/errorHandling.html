@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this tutorial is about errorHandling(try and catch)</h1>
+
+    <!-- <script>
+        setTimeout(() => {
+            console.log("this is first")
+        }, 2000);
+
+        setTimeout(() => {
+            try {
+                console.log(aai)
+            }
+            catch (error) {
+                console.log(aai)
+            }
+        }, 2000);
+
+        setTimeout(() => {
+            console.log("this is second")
+        }, 3000);
+
+        setTimeout(() => {
+            console.log("this is third")
+        }, 4000);
+
+        setTimeout(() => {
+            console.log("this is fourth")
+        }, 5000);
+    </script> -->
+
+
+    <h2>Error object and custom error</h2>
+
+
+    <!-- <script>
+        try{
+            console.log(aadi)
+            throw new ReferenceError("i'm not a good person")
+        }
+        catch(error){
+            console.log(error.name)
+            console.log(error.message)
+            console.log(error.stac)
+        }
+    </script> -->
+
+
+    <!-- <h1>if we get error in both try and catch then last console not be executed, for last this we use finally</h1>
+    <script>
+        try {
+            let a = parseInt(prompt("enter you age"))
+            if (a >= 180) {
+                throw new ReferenceError("this is not possible")
+            }
+        }
+
+        catch (error) {
+            console.log(error.name)
+            console.log(error.message)
+            console.log(error.stac)
+        }
+        console.log("this script is still running")
+    </script> -->
+
+    <h1>here we are using finally it will executed (no matte if try and catch both throw error)</h1>
+    <script>
+        try{
+            let a = 0;
+            console.log(program)
+            console.log("program ran successfully")
+            return
+        }
+        catch(err){
+            console.log("this is an error")
+            console.log(p)
+        }
+        finally{
+            console.log("we are using finally for close the file")
+            console.log("it'll be run always ")
+            console.log("if we return the value it will still work or even then it will be executed successfully")
+        }
+    </script>
+</body>
+
+</html>

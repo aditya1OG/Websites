@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this is hoisting tutorial</h1>
+    <p>Hoisting is(to many developers) an unknown or overlooked behavior of javascript. if a developer doesn't understand hoisting, programs may contain bugs(errors). to avoid bugs, always declare all variables at the beginning of every scope</p>
+    <script>
+        //👍😄 we can declare the function before initialization. 
+
+        // greet()
+        // function greet() {
+        //     console.log("Good Morning")
+        // }
+
+        //👍😄 throw error (can't access greet before initialization)
+        //👍😄 Function expression and class expression are not hoisted with any varialble(var,let const).
+
+        // greet()
+        // const greet = () => {
+        //     console.log("Good Morning")
+        // }
+
+
+        // console.log(a)     //👍😄through error (a is not defined)
+        // greet()
+        // function greet() {
+        //     console.log("Good Morning")
+        // }
+        //👍😄 declaration hoisted to the top but initialization is not.
+
+        // var a = 10;    //👍😄 the value of a is undefined in console
+        // let a;           //👍😄 if we declare the variable with let and const so its throw error(can't access 'a' before initialization)
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        .container {
+            height: calc(100vh - 50px);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .para {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        button {
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            background-color: rgb(244, 183, 183);
+            font-size: 15px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--👍👍👍 this is first tutorial  -->
+    <div class="container">
+        <img src="img/1.png" alt="">
+        <p class="para">Nike Shoe</p>
+        <button onclick="error()">Purchase - $149</button>
+        <p id="error"></p>
+    </div>
+
+    <script>
+        let err = document.getElementById("error");
+        function error() {
+
+            err.textContent = "Something went wrong here";
+            err.style.color = "red";
+        }
+    </script>
+
+
+
+
+    <!--👍👍👍 this is second question -->
+
+    <!-- <div
+        style="display: flex; flex-direction: column; height: calc(100vh - 50px); align-items: center; justify-content: center; gap: 20px;">
+        <div id="apple-shelf"
+            style=" border-radius: 20px; padding: 20px; background-color: rgb(202, 187, 187); height: 25px; width: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        </div>
+        <div id="orange-shelf"
+            style="border-radius: 20px; padding: 20px; background-color: rgb(203, 196, 184); height: 25px; width: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        </div>
+    </div>
+    <script>
+        let fruite = ["🥭", "🍎", "🥭", "🍎", "🍎", "🥭"];
+        let appleShelf = document.getElementById("apple-shelf")
+        let orangeShelf = document.getElementById("orange-shelf")
+
+        function sortFruit() {
+            for (let i = 0; i < fruite.length; i++) {
+                if (fruite[i] === "🍎") {
+                    appleShelf.textContent += "🍎";
+                }
+                else if (fruite[i] === "🥭") {
+                    orangeShelf.textContent += "🥭";
+                }
+            }
+        }
+        sortFruit();
+    </script> -->
+
+
+
+
+    <!--👍👍👍 this is third tutorial  -->
+
+    <!-- <script>
+        const recipientData = "Aditya";
+        const emailData = 
+        `hey ${recipientData}!
+        How are you`
+        console.log(emailData)
+    </script> -->
+
+
+
+
+    <!--👍👍👍 this is Fourth tutorial  -->
+    <div class="container">
+        <button id="btn-el"
+            style="color: white; background-color: black; font-size: 25px; font-weight: 600;">Score</button>
+        <p id="para" style="color: black; font-size: 25px; font-weight: 700;"></p>
+    </div>
+
+    <script>
+        //👍👍 1st practice set
+        // function getFirst(arr) {
+        //     return arr[1];
+        // }
+        // let getData = getFirst([12, 32, 4, 23, 45])
+        // console.log(getData)
+
+
+        //👍👍 2nd practice set:
+        const btnEl = document.getElementById("btn-el")
+        let paraEl = document.getElementById("para")
+
+        let newData = [
+            {
+                player: "aditya",
+                score: 98
+            },
+            {
+                player: "Kanha",
+                score: 89
+            }
+        ]
+        btnEl.addEventListener('click', () => {
+            // console.log(newData[0].score)
+            let getData = newData[0].score
+            paraEl.textContent = getData
+        })
+
+    </script>
+</body>
+
+</html>

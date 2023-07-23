@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: calc(100vh - 50px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(46, 135, 46);
+        }
+
+        h1 {
+            color: gold;
+            font-size: 60px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        #message-el {
+            font-size: 30px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .para {
+            font-size: 25px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .btn {
+            padding: 8px 50px;
+            border: 1px solid white;
+            color: rgb(46, 135, 46);
+            font-weight: 700;
+            font-size: 25px;
+            border-radius: 10px;
+            background-color: gold;
+            cursor: pointer;
+        }
+
+        .btn1 {
+            padding: 8px 63px;
+            border: 1px solid white;
+            color: rgb(46, 135, 46);
+            font-weight: 700;
+            font-size: 25px;
+            border-radius: 10px;
+            background-color: gold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #player-el {
+            font-size: 25px;
+            color: white;
+            font-weight: 600;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>BlackJack</h1>
+        <p id="message-el">Want to play a round?</p>
+        <p class="para" id="sum-cards">Cards: </p>
+        <p class="para" id="sum-el">Sum: </p>
+        <button class="btn" onclick="startGame()">START GAME</button>
+        <button class="btn1" onclick="newCard()">NEW CARD</button>
+        <p id="player-el"></p>
+    </div>
+    <script>
+        // let firstcard = 10;
+        // let secondcard = 11;
+        // let sum = firstcard + secondcard;
+        // let hasBlackJack = "false"
+        // // let isAlive = "ture"
+        // let message = ""
+
+
+        //👍 or we can get the number from user:
+        // let firstcard = parseInt(prompt("Enter the first card no."))
+        // let secondcard = parseInt(prompt("Enter the second card12 no."))
+        // let sum = firstcard + secondcard;
+        // let hasBlackJack = "false"
+        // // let isAlive = "ture"
+        // let message = ""
+
+
+        // 👍 or we can generate the random number:
+        // let firstcard = getRandom();
+        // let secondcard = getRandom();
+        // let sum = firstcard + secondcard;
+        // let hasBlackJack = "false"
+        // // let isAlive = "ture"
+        // let message = ""
+
+
+        //using this game start when we click the start game button
+        // 👍 or we can generate the array using random number:
+        let cards = []
+        let sum = 0;
+        let hasBlackJack = "false"
+        let isAlive = "false"
+        let message = ""
+
+
+        let messageEl = document.getElementById("message-el");
+        let sumEl = document.getElementById("sum-el");
+        let cardsEl = document.getElementById("sum-cards");
+
+        let player = {
+            name: "per",
+            points: 145
+        }
+        let playerEl = document.getElementById("player-el");
+        playerEl.textContent = player.name + ": $" + player.points
+        // console.log(playerPoints)
+
+        function getRandom() {
+            // return Math.floor(Math.random() * 15)    //it's from 0 to 15
+            let randomNumber = Math.floor(Math.random() * 13) + 1;    //it's from 1 to 15
+
+
+            //👍👍 it is for if we have only one random number in new card :
+            if (randomNumber > 10) {
+                return 18;
+            }
+            else if (randomNumber === 1) {
+                return 11;
+            }
+            else {
+                return randomNumber;
+            }
+        }
+
+        function startGame() {
+            // isAlive = "true"
+            let firstcard = getRandom();
+            let secondcard = getRandom();
+            cards = [firstcard, secondcard];
+            sum = firstcard + secondcard;
+            renderGame()
+        }
+
+        function renderGame() {
+
+            //😄😄 it's for all others not only for array
+            // cardsEl.textContent = "Cards: " + firstcard + " " + secondcard;
+
+
+            //😄😄 also we can use like this 
+            cardsEl.textContent = "Cards: "
+            for (let i = 0; i < cards.length; i++) {
+                cardsEl.textContent += cards[i] + " "
+            }
+
+            sumEl.textContent = "Sum: " + sum;
+
+
+            if (sum <= 20) {
+                message = "Do you want to draw a new card 😖😲😖";
+            }
+            else if (sum === 21) {
+                message = "wohoo! You've got BlackJack! 😄😄😄";
+                // message.style.color = "red";
+                hasBlackJack = "ture"
+            }
+            else {
+                message = "you are not the part of this game 💢💢💢";
+                isAlive = "false"
+            }
+            messageEl.textContent = message
+            console.log(message)
+        }
+
+        function newCard() {
+
+
+            //😄😄😄 😄😄😄 first way to do this 😄😄😄 😄😄😄:
+            // if (isAlive === true && hasBlackJack === false) {
+            // let card = getRandom();
+            // sum += card;
+            // cards.push(card);
+            // renderGame();
+            // }
+
+
+            //😄😄😄 😄😄😄this is second way to do this 😄😄😄 😄😄😄
+
+            // firstcard = parseInt(prompt("Enter the first card no."))
+            // secondcard = parseInt(prompt("Enter the second card12 no."))
+            // sum = firstcard + secondcard;
+
+            // 👍 or we can generate the array using random number:
+
+            // firstcard = getRandom();
+            // secondcard = getRandom();
+            // sum = firstcard + secondcard;
+
+
+            // 👍 or we can generate the random number:
+            // console.log(message)
+            // messageEl.textContent = message
+            // // if (isAlive === true && hasBlackJack === false) {
+            firstcard = getRandom();
+            secondcard = getRandom();
+            cards = [firstcard, secondcard];
+            sum = firstcard + secondcard;
+            hasBlackJack = "false"
+            isAlive = "ture"
+            message = ""
+
+            messageEl = document.getElementById("message-el");
+            sumEl = document.getElementById("sum-el");
+            cardsEl = document.getElementById("sum-cards");
+            renderGame();
+            // }
+
+        }
+
+    </script>
+</body>
+
+</html>

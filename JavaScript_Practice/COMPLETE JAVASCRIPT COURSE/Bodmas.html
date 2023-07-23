@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BODMAS</title>
+    <style>
+        .container {
+            height: calc(100vh - 50px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .data {
+            display: flex;
+            gap: 40px;
+        }
+
+        #num1-el,
+        #num2-el {
+            border-bottom: 2px solid black;
+            font-size: 30px;
+        }
+
+        .show {
+            display: flex;
+            width: 500px;
+            justify-content: space-evenly;
+            margin: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            border-radius: 10px;
+            background-color: rgb(74, 226, 74);
+            border: 1px solid #eee;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        #sum-el {
+            font-weight: 600;
+            font-size: 20px;
+            background-color: violet;
+            padding: 18px 150px 18px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="data">
+            <span id="num1-el"></span>
+            <span id="num2-el"></span>
+        </div>
+        <br>
+        <div class="show">
+            <button onclick="Add()">Add</button>
+            <button onclick="Sub()">Subtract</button>
+            <button onclick="Div()">Divide</button>
+            <button onclick="Mul()">Multiply</button>
+        </div>
+        <br>
+        <span id="sum-el">Operations : 👍</span>
+    </div>
+
+
+    <script>
+        let data1 = 5
+        document.getElementById("num1-el").textContent = data1
+        let data2 = 4
+        document.getElementById("num2-el").textContent = data2
+        let para = document.getElementById("sum-el");
+        // let total = 0
+        function Add() {
+            let total = data1 + data2;
+            para.textContent = "Sum: " + total;
+            // console.log(total)
+        }
+        function Sub() {
+            let total = data1 - data2;
+            para.textContent = "Sub: " + total;
+            // console.log(total)
+        }
+        function Div() {
+            let total = data1 / data2;
+            para.textContent = "Div: " + total;
+            // console.log(total)
+        }
+        function Mul() {
+            let total = data1 * data2;
+            para.textContent = "Mul: " + total;
+            // console.log(total)
+        }
+    </script>
+</body>
+
+</html>

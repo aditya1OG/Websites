@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 50px);
+            justify-content: center;
+            align-items: center;
+            background-color: crimson;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 600;
+            color: white;
+        }
+
+        #count-el {
+            font-size: 50px;
+            color: white;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        #increment-btn {
+            padding: 8px 40px;
+            border-radius: 10px;
+            border: 1px solid black;
+            background-color: rgb(3, 2, 2);
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        #save-btn {
+            padding: 8px 66px;
+            margin: 15px;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        #save-el {
+            font-size: 25px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>People Entered</h1>
+        <h2 id="count-el">0</h2>
+        <button type="" id="increment-btn" onclick="increment()">INCREMENT</button>
+        <button type="" id="save-btn" onclick="Save()">Save</button>
+        <p id="save-el">Previous Entries: </p>
+    </div>
+
+    <script>
+        // we can use textContent instead of innertext bcz innertext does'nt shown the hidden values
+
+        let countEl = document.getElementById("count-el")
+        let saveEl = document.getElementById("save-el")
+        let count = 0;
+        function increment() {
+            count += 1
+            countEl.textContent = count;
+        }
+        // increment()
+
+        function Save() {
+            let counstr = count + " - "
+            saveEl.textContent += counstr
+            countEl.textContent = 0;
+            count = 0;
+        }
+        // Save()
+
+    </script>
+
+</body>
+
+</html>

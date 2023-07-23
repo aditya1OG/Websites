@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>If we are using promises we need resolve or reject the promise</h1>
+
+    <h1>this is second tutorial about promises</h1>
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            console.log("this is first")
+            resolve(56)
+        })
+
+        p1.then((value) => {
+            console.log(value)
+            let p2 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("this is second")
+                }, 3000)
+            })
+            return p2
+
+        }).then((value) => {
+            console.log(value)
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("this is third")     //instead of resolve if we console this. this will not print the below value.
+                }, 2000);
+            })
+
+        }).then((value) => {
+            setTimeout(() => {
+                console.log(value)
+                console.log("we got all these values here")
+            }, 2000);
+        })
+    </script>
+
+
+    <!-- <h1>this is the third tutorial(loadscript) of promises</h1>
+    <script>
+        const loadscript = (src) => {
+            return new Promise((resolve, reject) => {
+                let script = document.createElement("script")
+                script.type = "text/javascript"
+                script.src = src
+                document.body.appendChild(script)
+                script.onload = () => {
+                    resolve(1)
+                }
+                script.onerror = () => {
+                    reject(0)
+                }
+            })
+        }
+
+        let p1 = loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css")
+        p1.then((value) => {
+            console.log(value)
+        }).catch((error) => {
+            console.log("we got some error here")
+        })
+
+    </script> -->
+
+    <h1>this is fourth tutorial</h1>
+
+    <!-- <script>
+        let p1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("i'm not resolve")
+            }, 2000)
+
+            resolve(1)
+            // reject(new error ("some error occured"))
+        })
+        p1.then(() => {
+            console.log("this is now resolve")
+        })
+        p1.then(() => {
+            console.log("Hurray")
+        })
+    </script> -->
+
+</body>
+
+</html>

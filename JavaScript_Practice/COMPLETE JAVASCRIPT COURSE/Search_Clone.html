@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a {
+        color: green;
+        font-size: 20px;
+        padding: 20px;
+        font-weight: 600;
+    }
+</style>
+
+<body>
+    <div class="container " style="display: flex; flex-direction: column;
+            justify-content: center; align-items: center; gap: 20px;">
+        <input id="input-el" type="text" style="width: 70%; height: 30px;
+                border-radius: 5px; border: 2px solid black; font-size: 15px; ">
+        <!--👍👍 if we are using function instead of addeventlistner so we need a onclick fucntion here -->
+        <button id="input-btn" style="background-color:
+                green; color: white; cursor: pointer; font-size: 25px;
+                font-weight: 600;">SAVE</button>
+        <button id="tab-btn" style="background-color:
+                transparent; color: black; cursor: pointer; font-size: 25px;
+                font-weight: 600;">SAVE Tab</button>
+        <button id="delete-btn" style="background-color:
+                red; color: white; cursor: pointer; font-size: 25px;
+                font-weight: 600;">Delete All</button>
+        <ul id="ul-el" style=" list-style: none;"></ul>
+    </div>
+
+    <script>
+
+        let myLeads = [];
+        let inputEl = document.getElementById("input-el");
+        const inputBtn = document.getElementById("input-btn");
+        const ulEl = document.getElementById("ul-el");
+        const deleteBtn = document.getElementById("delete-btn");
+        const tabBtn = document.getElementById("tab-btn");
+        let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+
+        if (leadsFromLocalStorage) {
+            myLeads = leadsFromLocalStorage
+            render(myLeads)
+        }
+
+        function render(Leads) {
+
+            let listItem = " ";
+            for (let i = 0; i < Leads.length; i++) {
+                // console.log(myLeads[i])
+                // ulEl.textContent = myLeads
+
+                //👍 or:
+                // ulEl.innerHTML += "<li>" + Leads[i] + "</li>"      //ulEl.innerHTML = listItems
+
+                //👍 we are using {li} like this :
+                // listItem += "<li><a target='_blank' href='" + Leads[i] + "'>" + Leads[i] + "</a></li>"
+
+                //👍 or we are using {li} like this :
+                listItem += `
+                    <li>
+        <a target='_blank', href="${Leads[i]}"> ${Leads[i]}</a>
+    </li> `
+
+                //👍 or also we can create a element instead of this :
+                // const li = document.createElement("li");
+                // li.textContent = Leads[i]
+                // ulEl.append(li)
+            }
+            ulEl.innerHTML = listItem;
+        }
+
+
+        //👍👍 using addEventListener:
+
+        let tabs = [
+            { url: "https://www.google.com" }
+        ]
+        tabBtn.addEventListener('click', function () {
+            // chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            //     let activeTab = tabs[0]
+            //     let activeTabId = activeTab.id
+
+            tabs.push(tabs[0].url);
+            localStorage.setItem("myLeads", JSON.stringify(myLeads));
+            render(myLeads);
+        })
+        // })
+
+        deleteBtn.addEventListener("click", function () {
+            // console.log("Double Clicked!")
+            localStorage.clear()
+            myLeads = []
+            render(myLeads)
+        })
+
+        inputBtn.addEventListener("click", function () {
+            // console.log("Button Clicked");
+            myLeads.push(inputEl.value);
+            inputEl.value = "";
+            localStorage.setItem("myLeads", JSON.stringify(myLeads));
+            render(myLeads);
+            console.log(localStorage.getItem("myLeads"));
+        });
+
+
+        //👍👍or we are using funcions instead of addEventListener: 
+
+        // function Data() {
+        //     myLeads.push(inputEl.value)
+        //     // console.log(myLeads)
+        //     myLeads.textContent = inputBtn;
+        //     inputEl.value = ""
+        //     // localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        //     render(myLeads)
+        //     // console.log(localStorage.getItem("myLeads"))
+        // }
+
+    </script>
+
+
+
+
+    <!-- 👍 second practice set -->
+
+    <!--  <div id="container1">
+        <button id="btn">Save</button>
+        <p id="para"></p>
+    </div>
+     <script>
+        const container = document.getElementById("container1");
+        const paraEl = document.getElementById("para");
+        container.addEventListener('click', () => {
+            console.log("Clicked")
+            container.innerHTML = "<button onclick='buy()'>Buy!</button>"
+        })
+        function buy() {
+            console.log("Button Clicked")
+            container.innerHTML = "<p>Thank you for buying</p>"
+        }
+    </script> -->
+
+
+
+
+    <!-- 👍 Third practice set -->
+
+    <!-- <script>
+        //👍 practice-1:
+
+        // let myData = `["this is my first data"]`
+        // myData = JSON.parse(myData)
+        // myData.push("this is my second data")
+        // console.log(myData)
+
+//👍 practice-2:
+        
+        // let newData = `["this is my first data"]`
+        // console.log(typeof newData)
+        // newData = JSON.parse(newData);
+        // console.log(typeof newData)
+        // newData.push("this is my second data")
+        // newData = JSON.stringify(newData)
+        // console.log(typeof newData)
+        // console.log(newData)
+
+//👍 practice-3:
+        
+        // let newData = ["this is my first data"]
+        // console.log(typeof newData)
+        // newData = JSON.stringify(newData);
+        // console.log(typeof newData)
+        // newData = JSON.parse(newData)
+        // newData.push("this is my second data")
+        // console.log(typeof newData)
+        // console.log(newData)
+    </script> -->
+
+</body>
+
+</html>

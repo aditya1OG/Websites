@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this tutorial is about overiding and super keuword</h1>
+
+    <script>
+
+        class Animal {
+            constructor(name, sound, color) {
+                this.name = name
+                this.sound = sound
+                this.color = color
+            }
+            run() {
+                console.log(this.name + " is running")
+            }
+            shout(eat) {
+                console.log(`${this.name} is shouting and eating ${eat}`)
+            }
+        }
+        class Dog extends Animal {
+            bite() {
+                console.log(`the name of Dog is ${this.name} and he/she is ${this.sound} and the color of this Dog is ${this.color}`)
+            }
+
+            //👍 this is method overiding:
+
+            // shout() {
+            //     console.log(this.name + " is shouting")
+            // }
+
+            shout(eat) {
+                super.shout(4)
+                console.log("one extra is adding")
+            }
+        }
+        class Cat extends Dog {
+            milk() {
+                console.log(`the name of cat is ${this.name} and he/she is ${this.sound} and the color of this cat is ${this.color}`)
+            }
+        }
+
+        let ani = new Animal("Bruno", "Roaring", "white")
+        let bark = new Dog("Tyson", "Barking", "Black")
+        let kitty = new Cat("Kitty", "Meow-Meow", "Brown")
+        ani.run()
+        ani.shout("Meat")
+        bark.bite()
+        kitty.milk()
+
+    </script>
+</body>
+
+</html>

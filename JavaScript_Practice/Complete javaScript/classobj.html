@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this is about class object</h1>
+    <script>
+        class form {
+            submit() {
+                alert(this.name + ": your form is submitted")
+            }
+            cancel() {
+                alert(this.name + ": your form is cancelled")
+            }
+            fill(id) {
+                this.name = id
+            }
+        }
+
+        let aadiform = new form()
+        aadiform.fill("aadi")
+        let kanhaform = new form()
+        kanhaform.fill("kanha")
+        aadiform.submit()
+        kanhaform.submit()
+        aadiform.cancel()
+    </script>
+</body>
+
+</html>

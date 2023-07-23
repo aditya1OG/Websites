@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this is arrow function</h1>
+    <script>
+        //😄😄 
+        // const hlw = () => {
+        //     console.log("hellow");
+        // }
+        // hlw();
+
+
+        //😄😄 if we have a single line code so we dont need paranthesis when we pass the parameter(only applicable for one parameter if parameter is more then one so paranthesis is mandatory) and also we don't need to pass the curly braces.
+
+        // const hlw = name => console.log("How are you " + name)
+        // const hlw2 = (name, greeting) => {
+        //     console.log(name, greeting)
+        // }
+        // hlw("kanha");
+        // hlw2("aditya", "Good Morning");
+
+
+        //😄😄 using object:
+
+        // const a = {
+        //     name: "aditya Tiwari",
+        //     course: "MCA",
+        //     duration: "2 Years",
+        //     show: function () {
+        //         console.log(`My name is ${this.name}, i'm pursuing ${this.course} in SGRRU university and the duration of this course is ${this.duration}`)
+        //     }
+        // }
+        // a.show()
+        // console.log(a)
+
+
+        // 😄😄 function inside function(we don't access the object variables using this keyword if we have nested function. for this we need to store that {this} varible to another variable)
+
+        // const a = {
+        //     name: "Kanha Tiwari",
+        //     course: "MCA",
+        //     duration: "2 Years",
+        //     show: function () {
+        //         console.log(`My name is ${this.name}, i'm pursuing ${this.course} in SGRRU university and the duration of this course is ${this.duration}`)
+        //         let that = this       //if we need to store the data of the obj so we need to store {this} value in that variable
+        //         setTimeout(function () {
+        //             console.log(this)    //this is a window object
+
+        //             //😄😄 here we did't get the value of object. 
+        //             // console.log(`My name is ${this.name}, i'm pursuing ${this.course} in SGRRU university and the duration of this course is ${this.duration}`)
+
+        //             console.log(`My name is ${that.name}, i'm pursuing ${this.course} in SGRRU university and the duration of this course is ${that.duration}`)
+
+        //         }, 2000)
+        //     }
+        // }
+        // a.show()
+
+
+        function greeting() {
+            console.log("first")
+            sayhi()
+            console.log("second")
+        }
+        function sayhi() {
+            let hii = (name) => {
+                console.log(name)
+                return hii
+            }
+            hii("aditya")
+            console.log("hiii", name)
+        }
+
+        greeting()
+
+    </script>
+</body>
+
+</html>
