@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - log in or sign up</title>
+    <link rel="icon" type="" href="https://img.icons8.com/?size=512&id=118497&format=png" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="bg-white p-8 rounded-lg shadow-md w-full sm:w-8/12 ">
+            <h1 class="text-3xl font-bold mb-6">Sign Up for Facebook</h1>
+            <p class="mb-5">It's quick and easy</p>
+            <hr class="w-full h-1/2 text-gray-500 mb-4 border-1 border-gray-500 border-solid">
+            <form>
+                <div class="mb-4 flex flex-col sm:flex-row gap-5">
+                    <input type="text" id="firstName" name="firstName" placeholder="First name"
+                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                        required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last name"
+                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <input type="text" id="email" name="email" placeholder="Mobile number or Email Address"
+                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <input type="password" id="password" name="password" placeholder="New password"
+                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                        required>
+                </div>
+                <div class="mb-4 flex flex-col gap-2">
+                    <label for="" class="text-xs text-gray-500">Date of birth</label>
+                    <input type="date"
+                        class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500 cursor-pointer"
+                        required>
+                </div>
+                <div class="mb-4 flex flex-wrap gap-4 sm:gap-6 items-center">
+                    <p>Gender</p>
+                    <input type="radio" name="gender" value="Male" class="cursor-pointer">Male
+                    <input type="radio" name="gender" value="Female" class="cursor-pointer">Female
+                    <input type="radio" name="gender" value="Custom" class="cursor-pointer">Custom
+                </div>
+                <p class="text-xs mt-4 text-gray-700">People who use our service may have uploaded your contact
+                    information
+                    to Facebook. Learn more.</p>
+                <p class="text-xs mt-4 text-gray-700">By clicking Sign Up, you agree to our Terms and that you have read
+                    our
+                    Data Policy, including our Cookie Use.</p>
+                <button type="submit"
+                    class="w-full py-2 mt-5 bg-green-500 text-white font-bold rounded hover:bg-green-400">Sign
+                    Up</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
