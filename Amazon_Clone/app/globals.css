@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply text-sm flex items-center gap-0 lg:gap-1 whitespace-nowrap overflow-x-scroll lgl:overflow-x-hidden
+}
+
+.container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
