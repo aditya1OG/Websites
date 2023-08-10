@@ -94,11 +94,11 @@ const SecondCarousel = () => {
             >
                 {carousel.map((item) => (
                     <SwiperSlide key={item.id}>
-                        <div className=' h-[300px] min-w-[150px] flex flex-col gap-1 items-center justify-center ml-6 '>
+                        <div className='h-[300px] flex flex-col gap-1 items-center justify-center ml-6 '>
                             <Link href={item.link} >
-                                <div className='h-[full] m-2'>
+                                <div className='flex items-center justify-center'>
                                     <img
-                                        className="h-full w-full object-cover rounded-lg scale-120 transition-transform duration-300 hover:scale-90"
+                                        className="object-contain aspect-[1] mix-blend-color-burn rounded-lg scale-120 transition-transform duration-300 hover:scale-90"
                                         src={item.img}
                                         alt="Home card"
                                     />
