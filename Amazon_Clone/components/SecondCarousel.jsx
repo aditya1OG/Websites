@@ -81,7 +81,7 @@ const SecondCarousel = () => {
                             <Link href={item.link} >
                                 <div className=' w-full m-2 flex items-center justify-center'>
                                     <img
-                                        className="h-[250px] w-full absolute object-contain rounded-lg scale-120 transition-transform duration-300 hover:scale-90"
+                                        className="object-contain aspect-[1] mix-blend-color-burn absolute object-contain rounded-lg scale-120 transition-transform duration-300 hover:scale-90"
                                         src={item.img}
                                         alt="Home card"
                                     />
