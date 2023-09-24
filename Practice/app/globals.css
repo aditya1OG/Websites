@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .leftsidebar {
+  @apply  left-0 top-0 z-20 flex h-screen w-fit flex-col justify-between overflow-auto bg-white max-md:hidden;
+}
+
+.leftsidebar_link {
+  @apply relative flex justify-start gap-5 rounded-lg px-10 ;
+} */
+
+
+@layer base {
+  body {
+    @apply bg-gray-100;
+  }
+}
